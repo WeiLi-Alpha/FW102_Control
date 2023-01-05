@@ -1,0 +1,26 @@
+Terminator = CR;
+
+resetPosition
+{
+	out "RESET %i";
+	in "OK";
+}
+
+getPosition
+{
+	out "POS";
+	in "%i";
+}
+
+setPosition
+{
+	out "SET %i";
+	in "OK";
+}
+
+stop
+{
+	out "STOP";
+	in "OK";
+}
+

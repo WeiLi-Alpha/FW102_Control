@@ -1,0 +1,31 @@
+record(ai, "$(sys):$(dev):POS:READ")
+{
+	field(DESC, "$(dev) position read")
+	field(DTYP, "stream")
+	field(INP,  "@$(protocol) getPosition $(port)")
+	field(SCAN, "1 second")
+}
+record(ai, "$(sys):$(dev):STOP")
+{
+	field(DESC, "$(dev) stop motion")
+	field(DTYP, "stream")
+	field(INP,  "@$(protocol) stop $(port)")
+	field(SCAN, "Passive")
+}
+
+record(ao, "$(sys):$(dev):RESET")
+{
+	field(DESC, "$(dev) reset posiiton reading")
+	field(DTYP, "stream")
+	field(OUT,  "@$(protocol) resetPosition $(port)")
+	field(SCAN, "Passive")
+}
+
+
+record(ao, "$(sys):$(dev):POS:SET")
+{
+	field(DESC, "$(dev) set posiiton")
+	field(DTYP, "stream")
+	field(OUT,  "@$(protocol) setPosition $(port)")
+	field(SCAN, "Passive")
+}

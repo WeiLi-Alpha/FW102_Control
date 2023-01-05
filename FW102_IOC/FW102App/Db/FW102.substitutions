@@ -1,0 +1,17 @@
+# FW102.substitutions
+# Template database for the FW102 controller using ESP32
+# Wei Li 04/Jan/2023
+#
+# substitutions:
+# sys   - prefix of the device, could be RNG:IMAGE-MOTOR1
+# dev    - device, ACE-SDE in this case
+# port   - device port
+# proto  - protocol, arcus_ACE-SDE.proto for this controller and driver
+#
+################################################################################
+
+file db/FW_base.template {
+
+    pattern { sys, dev, port, protocol}
+        { "TEST", "FW102", "FW", "FW102.protocol"}
+}
