@@ -6,6 +6,9 @@ It sends pulses to the external trigger of the FW102 to rotate the wheel and
 therefore switch the filters mounted on the wheel. 
 Each step takes about one second.
 
+This controller is designed for FW102 filter wheel, but it can also be used to
+control FW102B, FW102C or similar motorized filter wheel with some modifications.
+
 ## Protocols
 The essential functions include: 
 - read the current position
